@@ -7,7 +7,7 @@ First install the taper monkey extension at this link: https://chrome.google.com
 Next go to the extension from the extensions tab at the top right.
 
 ![Screenshot 2022-06-05 at 17 43 51](https://user-images.githubusercontent.com/70839471/172061135-f2d4d694-bb84-4b51-83c0-1801148304cb.png)  
-
+<br />
 
 
 Next click create a new script and this should open up a new tab with a file. 
