@@ -8,12 +8,16 @@ Next go to the extension from the extensions tab at the top right.
 
 ![Screenshot 2022-06-05 at 17 43 51](https://user-images.githubusercontent.com/70839471/172061135-f2d4d694-bb84-4b51-83c0-1801148304cb.png)  
 <br />
+<br />
+<br />
 
 
 Next click create a new script and this should open up a new tab with a file. 
 
 ![Screenshot 2022-06-05 at 17 47 34](https://user-images.githubusercontent.com/70839471/172061271-e80a72c5-f86b-4321-a0f5-460f4567829d.png)  
-
+<br />
+<br />
+<br />
 
 
 Finally go to the file called "js-code" in this repositary and paste it into the file in the taper monkey tab. Once you make a microsoft account then go into the dashboard like below and it should start working.
