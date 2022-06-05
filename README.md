@@ -1,6 +1,6 @@
 # microsoft-rewards-bot
 You can use this Microsoft rewards bot to get points quickly and efficiently. It runs in the background and will do all of your microsoft rewards tasks, you HAVE to enable popups from the website but after that it is very simple and efficient. After setting it up by using the instructions below, it will run everytime you open microsoft rewards.
-
+<br />
 First install the taper monkey extension at this link: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en  
 <br />
 
