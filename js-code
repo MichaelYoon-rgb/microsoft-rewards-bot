@@ -1,0 +1,61 @@
+// ==UserScript==
+// @name         Microsoft Rewards Bot
+// @namespace    http://tampermonkey.net/
+// @version      1.1
+// @description  I will hack microsoft rewards for you!!! You can also do other stuff while it is running.
+// @author       You
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
+(function() {
+    'use strict';
+    if (document.readyState == "complete" || document.readyState == "loaded" || document.readyState == "interactive") {
+        clickCards()
+    } else {
+        document.addEventListener("DOMContentLoaded", function(event) {
+            clickCards()
+        });
+    }
+})();
+function clickCards(){
+
+    const params = new URLSearchParams(window.location.search)
+    if (params.has('rnoreward')){
+        setInterval(function(){
+            if (document.getElementById("rqStartQuiz")){
+                document.getElementById("rqStartQuiz").click()
+            }
+
+            var largeAnswer = document.querySelectorAll(".b_cards")
+            if (largeAnswer.length){
+
+                for (let i = 0; i < largeAnswer.length; i++) {
+                    if (largeAnswer[i].getAttribute("iscorrectoption") === "True"){
+                        largeAnswer[i].click()
+                    }
+                }
+            }
+
+            var smallAnswer = document.querySelectorAll(".rqOption")
+            if (smallAnswer.length) {
+                for (let i = 0; i < smallAnswer.length; i++) {
+                    smallAnswer[i].click()
+                }
+            }
+
+        }, 500)
+
+
+    }
+    var plus10 = document.querySelectorAll(".mee-icon.mee-icon-AddMedium")
+    if (plus10){
+      var plus10Length = plus10.length
+
+      for (let i = 0; i < plus10Length; i++) {
+          console.log(plus10[i])
+          plus10[i].parentNode.parentNode.parentNode.parentNode.click()
+      }
+    }
+
+}
+
