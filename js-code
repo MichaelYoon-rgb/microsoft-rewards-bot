@@ -8,20 +8,54 @@
 // @grant        none
 // ==/UserScript==
 (function() {
+
     'use strict';
     if (document.readyState == "complete" || document.readyState == "loaded" || document.readyState == "interactive") {
         clickCards()
     } else {
+
         document.addEventListener("DOMContentLoaded", function(event) {
             clickCards()
         });
     }
 })();
-function clickCards(){
+function randomString(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() *
+ charactersLength));
+   }
+   return result;
+}
 
+function clickCards(){
+    var first = true
     const params = new URLSearchParams(window.location.search)
+    if (params.has('searchTab')){
+        if (params.get('first') == "true"){
+            localStorage.setItem('numSearch', 0);
+        }
+        var numSearch = localStorage.getItem('numSearch');
+        if (numSearch === null){
+            numSearch = 0
+        }
+        localStorage.setItem('numSearch', parseInt(numSearch) + 1);
+        console.log(numSearch)
+        if (numSearch >= 90){
+            close();
+        }
+        document.location.href = "https://www.bing.com/search?searchTab=true&q=" + randomString(3);
+    }
+    if (window.location.href === "https://rewards.microsoft.com/"){
+        window.open("https://www.bing.com/search?q=abc&searchTab=true&first=true", '_blank').focus();
+    }
     if (params.has('rnoreward')){
         setInterval(function(){
+            if (document.querySelector(".btOption.b_cards")){
+                document.querySelector(".btOption.b_cards").click()
+            }
             if (document.getElementById("rqStartQuiz")){
                 document.getElementById("rqStartQuiz").click()
             }
