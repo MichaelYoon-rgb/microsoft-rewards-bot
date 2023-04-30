@@ -1,4 +1,5 @@
 # microsoft-rewards-bot
+Check out the video with instructions here: https://youtu.be/9MXxnIe5nBY
 You can use this Microsoft rewards bot to get points quickly and efficiently. It runs in the background and will do all of your microsoft rewards tasks, you HAVE to enable popups from the website but after that it is very simple and efficient. After setting it up by using the instructions below, it will run everytime you open microsoft rewards. This ONLY workes on Chrome unfortunately.
 
 <br />
